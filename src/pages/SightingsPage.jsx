@@ -25,7 +25,9 @@ export default function Sightings({ sightings, getAnimalsWithSightings }) {
   useEffect(() => {
     axios
       .get(
-        `https://wildfindserver.adaptable.app/api/specimens/${specimenId}/sightings`
+        `${
+          import.meta.env.VITE_SERVER_URL
+        }/api/specimens/${specimenId}/sightings`
       )
       .then((response) => {
         setSights(response.data);

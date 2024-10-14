@@ -26,7 +26,7 @@ export default function UserProfilePage() {
   //GET all of the user information
   const getUserInformation = async () => {
     await axios
-      .get(`https://wildfindserver.adaptable.app/api/users/${userId}`)
+      .get(`${import.meta.env.VITE_SERVER_URL}/api/users/${userId}`)
       .then((response) => {
         setUser(response.data);
       })
@@ -46,7 +46,7 @@ export default function UserProfilePage() {
     }
     try {
       await axios.post(
-        `https://wildfindserver.adaptable.app/api/users/${userId}/following`,
+        `${import.meta.env.VITE_SERVER_URL}/api/users/${userId}/following`,
         {
           userId: loggedUserId, //userId of the user that is currently logged in, for the request in the backend
         }

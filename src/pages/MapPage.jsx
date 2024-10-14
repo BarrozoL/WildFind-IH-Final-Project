@@ -8,8 +8,6 @@ export default function MapPage({}) {
   const [location, setLocation] = useState("");
   const [sightings, setSightings] = useState([]);
 
-  const ANIMALS_DB = "https://wildfindserver.adaptable.app/";
-
   useEffect(() => {
     if (location) {
       getSightingsByLocation(location).then((data) => setSightings(data));
@@ -19,7 +17,7 @@ export default function MapPage({}) {
   const getSightingsByLocation = async (location) => {
     try {
       const response = await axios.get(
-        `${ANIMALS_DB}/api/sightings/${location}`
+        `${import.meta.env.VITE_SERVER_URL}/api/sightings/${location}`
       );
       return response.data;
     } catch (error) {

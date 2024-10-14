@@ -23,7 +23,7 @@ export default function PrivateMessagePage() {
 
   const getMessages = async () => {
     axios
-      .get(`https://wildfindserver.adaptable.app/api/users/${userId}`)
+      .get(`${import.meta.env.VITE_SERVER_URL}/api/users/${userId}`)
       .then((response) => {
         setUser(response.data);
       })
@@ -34,7 +34,7 @@ export default function PrivateMessagePage() {
 
   const getUpdatedConversation = async (receiverId) => {
     axios
-      .get(`https://wildfindserver.adaptable.app/api/users/${userId}`)
+      .get(`${import.meta.env.VITE_SERVER_URL}/api/users/${userId}`)
       .then((response) => {
         const updatedUser = response.data;
         const updatedConversation = updatedUser?.conversations?.find(
@@ -60,7 +60,7 @@ export default function PrivateMessagePage() {
         ? selectedConversation?.user2Id?._id
         : selectedConversation?.user1Id?._id;
     axios
-      .post(`https://wildfindserver.adaptable.app/api/messages/${receiverId}`, {
+      .post(`${import.meta.env.VITE_SERVER_URL}/api/messages/${receiverId}`, {
         sender: currentUserId,
         text: messageText,
       })
