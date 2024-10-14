@@ -1,0 +1,70 @@
+.add-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.add-row {
+  display: flex;
+  align-items: center;
+}
+
+.add-heading {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  width: 40vw;
+}
+
+.add-heading select {
+  width: 25%;
+}
+
+select {
+  width: auto;
+}
+
+.add-row label {
+  width: 30%;
+  padding-right: 1%;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.add-row select:not(.basic-multi-select),
+.add-row textarea {
+  max-width: 40%;
+  border-radius: 5px;
+}
+.add-row input:not(.basic-multi-select__input) {
+  max-width: 50%;
+  border-radius: 5px;
+}
+
+.add-row label input {
+  width: 4%;
+  margin-right: 2%;
+}
+
+.add-form {
+  width: 1000px;
+  min-height: 100vh;
+  padding: 20px;
+  margin-top: 50px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-submit {
+  text-align: center;
+  width: 100%;
+}
