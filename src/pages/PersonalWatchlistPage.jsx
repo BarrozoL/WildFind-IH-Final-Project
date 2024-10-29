@@ -25,7 +25,6 @@ export default function UserWatchlistPage() {
       .get(`${import.meta.env.VITE_SERVER_URL}/api/users/${userId}`)
       .then((response) => {
         setUser(response.data);
-        console.log(user);
       })
       .catch((error) => {
         console.error("Error fetching sightings:", error);

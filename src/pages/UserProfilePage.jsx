@@ -186,7 +186,6 @@ export default function UserProfilePage() {
         }}
       ></div>
       <div className="profile">
-        {console.log(user)}
         <div
           style={{
             display: "flex",

@@ -37,9 +37,6 @@ export default function SocialFeedPage() {
         //Setting the comment texts to an array the same length as the sightings array
         //and using .fill() to populate them with empty strings
         setCommentText(new Array(foundActions.length).fill(""));
-
-        console.log("userId is...", userId);
-        console.log("user is...", decodedToken);
       })
       .catch((error) => {
         console.error("Error fetching actions:", error);
@@ -293,7 +290,6 @@ export default function SocialFeedPage() {
                         {action?.user?.username}{" "}
                       </Link>{" "}
                       has added the {action?.addition?.name}
-                      {console.log(action?.addition?.name)}
                     </h3>
                     <p>
                       <b>Description: </b>

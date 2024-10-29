@@ -18,7 +18,7 @@ const Navbar = () => {
 
   useEffect(() => {
     fetchUser();
-  }, [currentUser?.notifications]);
+  }, []);
 
   const clearNotifications = async () => {
     axios;

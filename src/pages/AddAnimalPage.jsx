@@ -30,7 +30,7 @@ export default function AddAnimal() {
   const userId = decodedToken ? decodedToken._id : null; // Extract userId
   const username = decodedToken ? decodedToken.username : null; // Extract username
 
-  /*console.log(addAnimal);*/
+
   const [selectedAnimalType, setSelectedAnimalType] = useState("");
   const [name, setName] = useState("");
   // const [image, setImage] = useState("");
@@ -48,7 +48,6 @@ export default function AddAnimal() {
         // Filter data to include only those with typeId <= 8
         const filteredData = data.filter((animal) => animal.typeId <= 8);
         setAnimals(filteredData);
-        console.log(animals);
       })
       .catch((error) => console.error("Error fetching animals:", error));
   }, []);
@@ -97,7 +96,6 @@ export default function AddAnimal() {
 
   const animalExists = (animal) => {
     if (!Array.isArray(animals)) {
-      console.log(animals);
       console.error("Animals data is not an array or is undefined.");
       return null;
     }
@@ -226,7 +224,6 @@ export default function AddAnimal() {
     specimenService
       .createSpecimen(requestBody)
       .then((response) => {
-        console.log(typeId);
         setName("");
         setSelectedAnimalType("");
         setDescription("");
