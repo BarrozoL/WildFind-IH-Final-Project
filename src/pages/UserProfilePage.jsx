@@ -241,7 +241,7 @@ export default function UserProfilePage() {
                     style={{ marginBottom: "10%" }}
                     className="edit-user-btn"
                   >
-                    Follow this user!
+                    Follow this user to add them to your contacts!
                   </button>
                 </div>
               )}

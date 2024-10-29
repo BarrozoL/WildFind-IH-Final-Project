@@ -112,7 +112,7 @@ export default function PrivateMessagePage() {
   return (
     <div className="private-messages-wrapper">
       <div className="conversation-sidebar">
-        <h2>Private Messages:</h2>
+        <h2>Contacts list:</h2>
         {user?.conversations?.map((conversation, index) => {
           return (
             //we also map over the index to use it as a key. We we getting a repeated keys error
