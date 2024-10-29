@@ -243,11 +243,6 @@ export default function UserProfilePage() {
                   >
                     Follow this user!
                   </button>
-                  <Link to={`/user/messages/${userId}`}>
-                    <button className="edit-user-btn">
-                      Send {user.username} a message!
-                    </button>
-                  </Link>
                 </div>
               )}
             </div>
